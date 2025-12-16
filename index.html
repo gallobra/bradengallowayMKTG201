@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OFF-COURT | Full Deck</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&family=Rajdhani:wght@400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-green: #39ff14;
+            --court-orange: #ff5e00;
+            --hud-blue: #00f3ff;
+            --dark-bg: #0a0a0a;
+            --panel-bg: rgba(20, 20, 20, 0.9);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            /* Futuristic Grid Background */
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        /* ================= PRESENTATION STYLES ================= */
+        /* Typography */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Teko', sans-serif;
+            text-transform: uppercase;
+            line-height: 0.9; margin: 0 0 20px 0;
+        }
+        .reveal h1 { font-size: 5em; text-shadow: 0 0 20px rgba(57, 255, 20, 0.4); }
+        .reveal h2 { color: var(--brand-green); font-size: 2.5em; }
+        .reveal p, .reveal li { font-size: 0.75em; line-height: 1.5; }
+        
+        /* Colors */
+        .highlight { color: var(--brand-green); }
+        .orange { color: var(--court-orange); }
+        .blue { color: var(--hud-blue); }
+        
+        /* Panels */
+        .hud-panel {
+            background: var(--panel-bg);
+            border: 1px solid #333;
+            border-left: 5px solid var(--brand-green);
+            padding: 25px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            margin-bottom: 20px; text-align: left;
+            position: relative;
+        }
+        .hud-panel::after {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 15px; height: 15px;
+            border-top: 2px solid var(--brand-green);
+            border-right: 2px solid var(--brand-green);
+        }
+
+        /* Layouts */
+        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; width: 100%; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; }
+        .grid-4 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 20px; width: 100%; }
+        
+        /* Images */
+        .reveal img {
+            border-radius: 8px; border: 2px solid #333;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5); max-height: 400px;
+        }
+        .logo-img { border: none !important; box-shadow: none !important; background: transparent !important; }
+
+        /* Animated Line */
+        .court-line {
+            height: 2px; background: #333; width: 100%; margin: 20px 0; position: relative;
+        }
+        .court-line::before {
+            content: ''; position: absolute; height: 100%; width: 100px;
+            background: var(--brand-green); animation: scan 2s infinite linear;
+        }
+        @keyframes scan { 0% { left: 0; opacity: 0; } 50% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+
+    </style>
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+
+        <section>
+            <img src="Gemini_Generated_Image_88f3ff88f3ff88f3.png   " alt="OFF-COURT Logo" class="logo-img" style="width: 220px; margin-bottom: 20px;">
+            <h4 class="orange">PRE-GAME REPORT // 2025</h4>
+            <h1>OFF-COURT</h1>
+            <h3>GAME READY. <span class="highlight">STREET PROOF.</span></h3>
+            <div class="court-line"></div>
+            <p style="font-size: 0.8em; letter-spacing: 3px;">Braden Galloway</p>
+            <aside class="notes">Good morning. My name is Braden Galloway. Today I am introducing OFF-COURT.</aside>
+        </section>
+
+        <section>
+            <h2>THE ORIGIN</h2>
+            <div class="split">
+                <div style="opacity: 0.8; text-align: left;">
+                    <h4 class="orange">THE FOUL</h4>
+                    <p>I played lots of travel basketball growing up. In between games during tournaments, I would have to take my shoes off to not get them ruined. But I was tired of wearing sandals. Was there any better option?</p>
+                </div>
+                <div class="hud-panel">
+                    <h4 class="highlight">THE PLAY</h4>
+                    <p>We believe athletes shouldn't have to choose between protecting their shoes and looking good.</p>
+                    <p class="orange" style="font-size: 1.2em; font-weight: bold;">Stop wearing sandals. Start wearing armor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="orange">DEFENSIVE BREAKDOWN</h2>
+            <p style="margin-bottom: 30px;">The Struggle</p>
+            <div class="grid-4">
+                <div class="hud-panel"><h4 class="orange">1. FATIGUE</h4><p>Unlacing tight high-tops just to rest between games is a hassle.</p></div>
+                <div class="hud-panel"><h4 class="orange">2. COLD FEET</h4><p>Wearing slides in winter = Frozen toes & stiff muscles.</p></div>
+                <div class="hud-panel"><h4 class="orange">3. WET SOCKS</h4><p>Damp socks from being outside cause blisters and ruin in-game traction.</p></div>
+                <div class="hud-panel"><h4 class="orange">4. DECAY</h4><p>Salt destroys sneaker glue and resale value instantly.</p></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>THE OFFENSE</h2>
+            <h1 class="highlight">THE EXO-SHELL</h1>
+            <img src="Gemini_Generated_Image_b4y7cmb4y7cmb4y7.png" alt="OFF-COURT Exo-Shell" style="width: 50%; margin-bottom: 20px; border-color: var(--brand-green);">
+            <div class="hud-panel">
+                <h3>ZIP. DIP. DOMINATE.</h3>
+                <div class="split">
+                    <ul style="text-align: left;">
+                        <li><b class="highlight">Hands-Free:</b> "Zip-and-Dip" Entry System.</li>
+                        <li><b class="highlight">Thermal:</b> EVA Foam traps heat.</li>
+                        <li><b class="highlight">Traction:</b> Hiking-grade sole.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MISSION DIRECTIVE</h2>
+            <div style="border-left: 10px solid var(--brand-green); padding: 40px; text-align: left; background: rgba(57, 255, 20, 0.05);">
+                <h3 style="line-height: 1.2; letter-spacing: 2px;">"TO ENGINEER THE ULTIMATE PROTECTION FOR YOUR SHOES EMPOWERING ATHLETES TO MOVE THROUGH ANY ELEMENT WITHOUT COMPROMISING STYLE, TIME, OR PERFORMANCE."</h3>
+            </div>
+        </section>
+
+        <section>
+            <h2>SCOUTING REPORT: TARGET MARKET 
+                <br>high school/college age, middle to upper-middle class</h2>
+            <div class="split">
+                <div class="hud-panel">
+                    <h4 class="blue">PRIMARY: THE WARRIOR</h4>
+                    <p><b>Male, 14-19</b></p>
+                    <p>Plays AAU year-round. Travels for games. Loves his shoes more than anything, but doesn't want to untie them after every game.</p>
+                </div>
+                <div class="hud-panel">
+                    <h4 class="blue">SECONDARY: THE INVESTOR</h4>
+                    <p><b>Male, 16-25</b></p>
+                    <p>Treats shoes like stock assets. Obsessed with them being in perfect condition.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>PLAYER CARD</h2>
+            <div class="split">
+                <div class="hud-panel" style="background: linear-gradient(180deg, #1a1a1a 0%, #000 100%); text-align: center;">
+                    <h3 style="margin:0;">JALEN</h3>
+                    <p class="orange">POINT GUARD | 17 YRS</p>
+                    <hr style="border-color: #333;">
+                    <p style="font-size: 0.8em; margin: 10px 0;">SNEAKER OBSESSION</p>
+                    <div style="height: 10px; background: #333; width: 100%;"><div style="height: 100%; width: 99%; background: var(--court-orange);"></div></div>
+                    <p style="font-size: 0.8em; margin: 10px 0;">HATES WET SOCKS</p>
+                    <div style="height: 10px; background: #333; width: 100%;"><div style="height: 100%; width: 100%; background: var(--court-orange);"></div></div>
+                </div>
+                <div style="text-align: left;">
+                    <div class="hud-panel">
+                        <h4 class="highlight">GOALS</h4>
+                        <p>- To look like an NBA pro during the "Tunnel Walk."
+                            <br>- To keep his shoes fresh to resell them later.
+                            <br>- To avoid cold feet and blisters during winter tournaments.
+                        </p>
+                    </div>
+                    <div class="hud-panel" style="border-left-color: var(--court-orange);">
+                        <h4 class="orange">THE PAIN</h4>
+                        <p>"I hate unlacing my KDs just to sit for an hour. But my toes freeze in slides."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>LEAGUE STATS</h2>
+            <div class="grid-4">
+                <div class="hud-panel" style="text-align: center;">
+                    <h1 class="blue" style="font-size: 4em;">$80 BILLION</h1>
+                    <p>Global Sneaker Market</p>
+                </div>
+                <div class="hud-panel" style="text-align: center;">
+                    <h1 class="highlight" style="font-size: 4em;">GROWING</h1>
+                    <p>Sneaker Care Sector Rising</p>
+                </div>
+                <div class="hud-panel">
+                    <h4 class="blue">GORPCORE</h4>
+                    <p>Rugged, technical outdoor gear is high fashion.</p>
+                </div>
+                <div class="hud-panel">
+                    <h4 class="blue">ASSETIZATION</h4>
+                    <p>Kids treat shoes like stocks. Protection is insurance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>SWOT ANALYSIS</h2>
+            <div class="grid-4" style="font-size: 0.8em;">
+                <div class="hud-panel" style="border-left-color: var(--brand-green);">
+                    <h4 class="highlight">STRENGTHS</h4>
+                    <ul><li>"Zip-and-Dip" Speed</li><li>Aesthetic Superiority</li><li>Thermal Utility</li></ul>
+                </div>
+                <div class="hud-panel" style="border-left-color: var(--court-orange);">
+                    <h4 class="orange">WEAKNESSES</h4>
+                    <ul><li>Sizing Complexity</li><li>Price Point ($60)</li></ul>
+                </div>
+                <div class="hud-panel" style="border-left-color: var(--hud-blue);">
+                    <h4 class="blue">OPPORTUNITIES</h4>
+                    <ul><li>Viral TikTok Content</li><li>Tournament Pop-ups</li></ul>
+                </div>
+                <div class="hud-panel" style="border-left-color: red;">
+                    <h4 style="color: red;">THREATS</h4>
+                    <ul><li>Cheap Knockoffs</li><li>Big Brand Entry</li></ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MATCHUP PREVIEW</h2>
+            <div class="grid-3">
+                <div style="opacity: 0.5; border: 1px solid #555; padding: 20px;">
+                    <h4>DRY STEPPERS</h4>
+                    <p>The "Plastic Bag"</p>
+                    <p class="orange" style="font-weight: bold;">price = $25
+                        <br> meduim quality - rips at seams
+                        <br> medium convenience - drawstrings
+                        <br> low brand awareness - sneaker niches
+                        <br> medium innovation - first "sneaker" specific cover
+                        <br> for hardcore sneakerheads
+                        <br> online presence - YoutTube
+                    </p>
+                </div>
+                <div class="hud-panel" style="transform: scale(1.1); border-color: var(--brand-green);">
+                    <h4 class="highlight">OFF-COURT</h4>
+                    <img src="Gemini_Generated_Image_b4y7cmb4y7cmb4y7.png" alt="OFF-COURT" style="width: 80px; margin: 10px 0;">
+                    <p>The "Exo-Skeleton"</p>
+                    
+                    <p class="highlight" style="font-weight: bold;">Price = $60
+                        <br> high quality - durable TPU shell
+                        <br> high convenience - hands-free entry
+                        <br> high brand awareness - targeted marketing
+                        <br> high innovation - zip-off exo-shell design
+                        <br> for athletes & sneakerheads
+                        <br> strong online presence - TikTok & Instagram
+
+                    </p>
+                </div>
+                <div style="opacity: 0.5; border: 1px solid #555; padding: 20px;">
+                    <h4>SILICONE</h4>
+                    <p>The "Cheap Cover"</p>
+                    <p class="orange" style="font-weight: bold;">price = $10
+                        <br> low quality - tears easily
+                        <br> medium convenience - hard to put on without ripping
+                        <br> no brand awareness - commodity product
+                        <br> low innovation
+                        <br> for commuters
+                        <br> high online presence - Amazon
+                    </p>
+                </div>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.8em; letter-spacing: 1px;"><b>COMPETITIVE ADVANTAGE:</b> We are the only cover cool enough for Instagram.</p>
+        </section>
+
+        <section>
+            <h2>WHY CHOOSE OFF-COURT</h2>
+            <div style="border-left: 10px solid var(--brand-green); padding: 40px; text-align: left; background: rgba(57, 255, 20, 0.05);">
+                <h6 style="line-height: 1.2; letter-spacing: 2px;">While silicone competitors focus on getting to and from only aand Dry Steppers offer a flimsy "plastic bag" solution, Off-Court is the first product to merge high-performance protection with streetwear aesthetics. We aren't just covering the shoe; we are upgrading it. Unlike the generic silicone covers that tear after one use or look childish, our structured EVA/TPU exoskeleton provides genuine traction and warmth, turning a basketball shoe into a winter-ready boot in seconds. Most importantly, we solve the "convenience gap"—with our split-heel entry and zipper system, you don't have to wrestle the cover onto your foot. You step in, zip up, and walk out, keeping your shoes deadstock-fresh without looking like you're wearing medical booties.</h3>
+            </div>
+        </section>
+
+        <section>
+            <h2>TECH PACK - PRODUCT</h2>
+            <div class="grid-4">
+                <div class="hud-panel"><h4>Benefits</h4><p>Convenience, performance, protection.</p></div>
+                <div class="hud-panel"><h4>Features</h4><p>"Zip-and-Dip" Tech, thermal EVA shell, rugged tread.</p></div>
+                <div class="hud-panel"><h4>Innovation</h4><p>Merging the utility of a galosh with the "hands-free" accessibility of a slide and the aesthetic of a high-fashion sneaker.</p></div>
+                <div class="hud-panel"><h4>Bradning</h4><p>"Off-Court" — rebellious, elite, and exclusive. The logo features the "Exo-Shield" concept.</p></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>CONTRACT VALUE - PRICE</h2>
+            <h1 class="highlight" style="font-size: 6em;">$59.99</h1>
+            <h3 class="orange">PREMIUM ACCESSORY</h3>
+            <div class="court-line"></div>
+            <div class="hud-panel" style="text-align: center; width: 60%; margin: auto;">
+                <p style="font-size: 1.2em;"><b>THE LOGIC:</b> "INSURANCE"</p>
+                <p>Paying 25% of the shoe's cost to protect the asset is a logical investment. It is affordable enough for a holiday gift or "nag power" purchase, but expensive enough to signal high quality and durability.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>DISTRIBUTION MAP - PLACE</h2>
+            <div class="grid-3">
+                <div class="hud-panel">
+                    <h4 class="blue">1. ONLINE</h4>
+                    <p>Website & TikTok Shop. High margins.</p>
+                </div>
+                <div class="hud-panel">
+                    <h4 class="blue">2. EVENTS</h4>
+                    <p>Pop-up booths at Winter AAU Tournaments.</p>
+                </div>
+                <div class="hud-panel">
+                    <h4 class="blue">3. RETAIL</h4>
+                    <p>Limited drops at boutiques (Kith/Flight Club).</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>THE HYPE MACHINE - PROMOTION</h2>
+            <div class="hud-panel" style="text-align: left;">
+                <ul style="font-size: 1em; line-height: 2;">
+                    <li><span class="highlight">VIRAL CONTENT:</span> "The Reveal" videos (Muddy boot -> Clean Sneaker).</li>
+                    <li><span class="highlight">INFLUENCER SEEDING:</span> Sending kits to sneaker YouTubers.</li>
+                    <li><span class="highlight">GUERRILLA:</span> "Wet Sock Trade-In" events at tournaments.</li>
+                    <li><span class="highlight">GEO-FENCING:</span> Targeted ads inside convention centers.</li>
+                    <li><span class="highlight">SEO: </span>Targetted results when anyone searches for basketball shoes.</li>
+                </ul>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>BRANDING</h2>
+            <div class="hud-panel" style="text-align: left; font-size: 1.1em;">
+                <p style="margin-bottom: 20px;"><b class="highlight">Personality: </b>Elite and unapologetic. We are for the players who take the game seriously, and we solve the problem aggressively.</p>
+                <p style="margin-bottom: 20px;"><b class="highlight">Main slogan: </b>"GAME READY. STREET PROOF."</p>
+                <p><b class="highlight">Sub-Messages</b>
+                <br>
+                "Zip. Dip. Dominate."
+                <br>
+                "The Court is Safe. The Walk There Isn't."
+                <br>
+                "Keep your assets safe."</p>
+            </div>
+        </section>
+
+
+        <section>
+            <h2>HEADLINES</h2>
+            <div class="hud-panel" style="text-align: left; font-size: 1.1em;">
+                <p><b class="highlight"></b>
+                <br>
+                "Don't Let the Weather Bench You."
+                <br>
+                "Armor for the Concrete. Ready for the Hardwood."
+                <br>
+                "Your Kicks are Deadstock. Keep Them That Way."</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>SOCIAL MEDIA CAPTIONS</h2>
+            <div class="hud-panel" style="text-align: left; font-size: 1.1em;">
+                <p><b class="highlight"></b>
+                <br>
+                The Flex: "POV: You just walked through a blizzard but the kicks are still fresh. 🥶🚫❄️ #OffCourt #TunnelReady #Sneakerhead"
+                <br>
+                The Solution: "No more wet socks. No more ruined suede. Zip up and lock in. 🔒🏀 Link in bio."
+                <br>
+                The Vibe: "The Tunnel Walk starts outside. Secure the bag. 💼👟 #GameDay"</p>
+            </div>
+        </section>
+
+       <section>
+            <h2>AD SCRIPT</h2>
+            <div class="hud-panel" style="text-align: left; font-size: 1.1em;">
+                <p><b class="highlight"></b>
+(0:00-0:05) Visual: Close up of feet stomping through grey, slushy snow. The sound is gritty and wet.
+Text Overlay: THE WALK IS BRUTAL.
+<br>
+(0:05-0:10) Visual: The beat drops (heavy bass). A hand grabs the neon zipper tab and zips down. The player steps out of the Off-Court shell onto a pristine, glowing hardwood court in clean Jordan 1s.
+
+Text Overlay: THE KICKS ARE SAFE.
+<br>
+(0:10-0:15) Visual: Fast montage of the player driving to the hoop. Logo flashes.
+<br>
+Voiceover: "Game Ready. Street Proof. Get Off-Court."
+            </div>
+        </section>
+
+
+
+        <section>
+            <img src="Gemini_Generated_Image_88f3ff88f3ff88f3.png" alt="OFF-COURT Logo" class="logo-img" style="width: 200px; margin-bottom: 30px;">
+            <h1>OFF-COURT</h1>
+            <h3>GAME READY. <span class="highlight">STREET PROOF.</span></h3>
+            <div class="court-line"></div>
+            <p style="margin-top: 50px; letter-spacing: 2px;">THANK YOU.</p>
+        </section>
+
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script>
+    // Reveal.js Configuration - FORCED SCREEN FIT
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        
+        // FORCE 16:9 ASPECT RATIO & FIT TO SCREEN
+        width: 1280,
+        height: 720,
+        margin: 0.04,
+        minScale: 0.2,
+        maxScale: 2.0,
+        
+        transition: 'slide',
+        backgroundTransition: 'slide'
+    });
+</script>
+
+</body>
+</html>
